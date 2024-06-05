@@ -8,6 +8,7 @@ from dataclasses import dataclass
 from src.exception import CustomException
 from src.logger import logging
 from src.components.data_transformation import DataTransformation
+from src.components.model_trainer import ModelTrainer
 
 
 @dataclass
@@ -54,3 +55,6 @@ if __name__ == "__main__":
 
     data_transformation = DataTransformation()
     train_arr,test_arr,_ = data_transformation.intiate_data_transformation()
+
+    model_trainer = ModelTrainer()
+    print(model_trainer.intiate_model_trainer(train_arr,test_arr))
