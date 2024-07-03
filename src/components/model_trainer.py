@@ -96,7 +96,7 @@ class ModelTrainer:
                 self.model_trainer_config.model_file_path,
                 best_model
             )
-            logging.info("Model training is completed")
+            logging.info("Model training is completed {best_model_name}")
             predicted = best_model.predict(X_test)
 
             r2_square = r2_score(y_test,predicted)
