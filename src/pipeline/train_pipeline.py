@@ -11,7 +11,9 @@ class ModelTrainingPipeline:
 
         obj = DataIngestion()
         obj.initate_data_ingestion()
+
         data_transformer = DataTransformation()
         train_arr,test_arr,_ = data_transformer.intiate_data_transformation()
+        
         model_trainer = ModelTrainer()
         model_trainer.intiate_model_trainer(train_arr,test_arr)
